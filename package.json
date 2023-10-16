@@ -1,0 +1,28 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc -p tsconfig.json && tsc -p tsconfig.server.json",
+    "dev": "concurrently \"tsc -w -p tsconfig.json\" \"tsc -w -p tsconfig.server.json\" \"nodemon .server/server.js\"",
+    "clean": "rm -rf dist .server build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^4.17.19",
+    "@types/node": "^20.8.6",
+    "concurrently": "^8.2.1",
+    "nodemon": "^3.0.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "acorn": "^8.10.0",
+    "acorn-walk": "^8.2.0",
+    "express": "^4.18.2"
+  },
+  "description": ""
+}
