@@ -1,24 +1,45 @@
-body,
-#app {
-  height: 100vh;
-  width: 100vw;
+* {
   margin: 0;
   padding: 0;
-  overflow: hidden;
+  box-sizing: border-box;
 }
 
-.Container {
-  display: flex;
+body,
+#app {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  min-height: 100vh;
+  scroll-snap-type: y mandatory;
+}
+
+.landingContainer,
+.skillContainer {
+  display: block;
+  scroll-snap-align: center;
+}
+
+.landingContainer {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background-image: url('Images/BackgroundImages/bgLanding.png');
   background-size: cover;
   background-position: center center;
+  overflow: hidden;
+}
+
+.homeContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 }
 
 .navBar {
   display: flex;
-  position: relative;
+  position: fixed;
   width: 100%;
   height: 10%;
 }
@@ -44,4 +65,37 @@ body,
   text-decoration: none;
   text-transform: uppercase;
   cursor: pointer;
+}
+
+.leftWrapper,
+.rightWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 49%;
+  height: 90%;
+  margin: 10px;
+  padding: 10px;
+}
+
+.introContainer,
+.aboutContainer {
+  display: flex;
+  flex-direction: column;
+  height: 50%;
+  width: 100%;
+  color: #fff;
+  top: 0;
+  position: relative;
+  text-align: center;
+}
+
+.skillContainer {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #333;
+  justify-content: center;
+  align-items: center;
 }
